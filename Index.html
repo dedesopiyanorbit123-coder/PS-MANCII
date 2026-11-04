@@ -1,1 +1,292 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ps Mancii - Rental PlayStation Terbaik & Terpercaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins & Orbitron -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#00439c',
+                            cyan: '#00f0ff',
+                            purple: '#7000ff',
+                            dark: '#0a0a12',
+                            card: '#121225',
+                            accent: '#ff0055'
+                        }
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a12;
+            color: #e2e8f0;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(112, 0, 255, 0.5);
+        }
+        .glow-box {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+        }
+        .glow-box:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+        }
+        .gradient-border {
+            border: 1px solid transparent;
+            background-image: linear-gradient(#121225, #121225), linear-gradient(135deg, #00f0ff, #7000ff);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-cyan selection:text-black">
 
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                        <i class="fa-solid font-orbitron">PM</i>
+                    </div>
+                    <span class="font-orbitron font-extrabold text-2xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-white to-brand-purple">
+                        PS MANCII
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="#home" class="hover:text-brand-cyan transition">Beranda</a>
+                    <a href="#harga" class="hover:text-brand-cyan transition">Daftar Harga</a>
+                    <a href="#layanan" class="hover:text-brand-cyan transition">Opsi Rental</a>
+                    <a href="#order" class="hover:text-brand-cyan transition">Pesan Sekarang</a>
+                    <a href="#pembayaran" class="hover:text-brand-cyan transition">Pembayaran</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#order" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-cyan to-brand-purple text-black font-semibold hover:opacity-90 transition shadow-lg shadow-brand-cyan/20 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Sewa via WA
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2 hover:text-brand-cyan">Beranda</a>
+            <a href="#harga" class="mobile-link block py-2 hover:text-brand-cyan">Daftar Harga</a>
+            <a href="#layanan" class="mobile-link block py-2 hover:text-brand-cyan">Opsi Rental</a>
+            <a href="#order" class="mobile-link block py-2 hover:text-brand-cyan">Pesan Sekarang</a>
+            <a href="#pembayaran" class="mobile-link block py-2 hover:text-brand-cyan">Pembayaran</a>
+            <a href="#order" class="mobile-link block text-center py-3 mt-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-purple text-black font-bold">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Sewa via WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-20 md:pt-44 md:pb-32 px-4 relative overflow-hidden">
+        <!-- Background Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-80 h-80 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-sm font-semibold tracking-wide uppercase mb-6">
+                🎮 Jasa Rental Console PlayStation Terpercaya
+            </span>
+            <h1 class="font-orbitron text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight mb-6">
+                SEWA PS MURAH &amp; MUDAH <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-purple-300 to-brand-purple glow-text">
+                    DI PS MANCII
+                </span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-300 text-lg sm:text-xl mb-10 leading-relaxed">
+                Nikmati serunya main PlayStation 3, PS4, hingga PS5 bersama teman &amp; keluarga. Bisa **main di tempat, COD, atau diantar langsung ke rumah Anda!**
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-purple text-black font-bold text-lg hover:scale-105 transition transform shadow-xl shadow-brand-cyan/20 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-gamepad text-xl"></i>
+                    Pesan Konsol Sekarang
+                </a>
+                <a href="#harga" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-card border border-white/10 hover:border-brand-cyan/50 text-white font-semibold text-lg hover:bg-white/5 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-tags"></i>
+                    Cek Paket &amp; Harga
+                </a>
+            </div>
+
+            <!-- Features Highlights -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="p-4 rounded-2xl bg-brand-card/60 border border-white/5 text-center">
+                    <i class="fa-solid fa-truck-fast text-brand-cyan text-2xl mb-2"></i>
+                    <h3 class="font-bold text-white">Antar Jemput</h3>
+                    <p class="text-xs text-gray-400 mt-1">Siap antar sampai kamar</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-card/60 border border-white/5 text-center">
+                    <i class="fa-solid fa-compact-disc text-brand-purple text-2xl mb-2"></i>
+                    <h3 class="font-bold text-white">Game Terbaru</h3>
+                    <p class="text-xs text-gray-400 mt-1">FIFA, FC24, GTA V, dll</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-card/60 border border-white/5 text-center">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl mb-2"></i>
+                    <h3 class="font-bold text-white">Unit Prima</h3>
+                    <p class="text-xs text-gray-400 mt-1">Stik responsif &amp; lancar</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-card/60 border border-white/5 text-center">
+                    <i class="fa-solid fa-wallet text-brand-purple text-2xl mb-2"></i>
+                    <h3 class="font-bold text-white">Bayar Mudah</h3>
+                    <p class="text-xs text-gray-400 mt-1">E-Wallet &amp; Transfer Bank</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING LIST SECTION -->
+    <section id="harga" class="py-20 px-4 bg-brand-card/40 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-orbitron text-3xl sm:text-4xl font-extrabold text-white mb-4">DAFTAR HARGA SEWA</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Pilih tipe PlayStation favoritmu dan durasi sewa yang diinginkan dengan harga transparan tanpa biaya tersembunyi.</p>
+            </div>
+
+            <!-- Console Type Tabs -->
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-10 overflow-x-auto pb-2">
+                <button onclick="switchTab('ps5')" id="tab-ps5" class="tab-btn active px-6 py-3 rounded-xl font-orbitron font-bold border border-brand-cyan bg-brand-cyan text-black transition">
+                    PLAYSTATION 5
+                </button>
+                <button onclick="switchTab('ps4')" id="tab-ps4" class="tab-btn px-6 py-3 rounded-xl font-orbitron font-bold border border-white/10 bg-brand-card text-gray-300 hover:border-brand-cyan/50 transition">
+                    PLAYSTATION 4
+                </button>
+                <button onclick="switchTab('ps3')" id="tab-ps3" class="tab-btn px-6 py-3 rounded-xl font-orbitron font-bold border border-white/10 bg-brand-card text-gray-300 hover:border-brand-cyan/50 transition">
+                    PLAYSTATION 3
+                </button>
+            </div>
+
+            <!-- Pricing Grid Content -->
+            
+            <!-- PS5 PRICING -->
+            <div id="content-ps5" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Per Jam (Di Tempat) -->
+                <div class="gradient-border p-6 rounded-2xl relative flex flex-col justify-between glow-box">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold font-orbitron px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan">MAIN DI TEMPAT</span>
+                            <i class="fa-solid fa-gamepad text-2xl text-brand-cyan"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">PS5 - Per Jam</h3>
+                        <p class="text-gray-400 text-sm mb-4">Cocok untuk mabar singkat dengan suasana nyaman rental Mancii.</p>
+                        <div class="text-3xl font-orbitron font-black text-white mb-6">
+                            Rp 20.000 <span class="text-sm font-normal text-gray-400">/ Jam</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> 2 Stik DualSense Wireless</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> TV 4K HDR 43-55 Inch</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Ruangan AC &amp; Free WiFi</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Game Digital Lengkap</li>
+                        </ul>
+                    </div>
+                    <a href="#order" onclick="selectPricing('PS5', '1 Jam', 'Rental di Tempat')" class="w-full py-3 text-center rounded-xl bg-white/10 hover:bg-brand-cyan hover:text-black font-semibold transition text-white">Pilih Paket</a>
+                </div>
+
+                <!-- Per Hari 24 Jam (Antar/COD) -->
+                <div class="gradient-border p-6 rounded-2xl relative flex flex-col justify-between glow-box border-2 border-brand-cyan">
+                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-brand-cyan to-brand-purple text-black font-bold text-xs px-3 py-1 rounded-full">POPULER</div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold font-orbitron px-3 py-1 rounded-full bg-brand-purple/30 text-purple-300">HOME RENTAL / COD</span>
+                            <i class="fa-solid fa-house-laptop text-2xl text-brand-purple"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">PS5 - Paket 24 Jam</h3>
+                        <p class="text-gray-400 text-sm mb-4">Puas main seharian di rumah, dibawa COD atau Diantar.</p>
+                        <div class="text-3xl font-orbitron font-black text-white mb-6">
+                            Rp 200.000 <span class="text-sm font-normal text-gray-400">/ 24 Jam</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> 2 Stik DualSense Original</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Kabel HDMI &amp; Power lengkap</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Game FIFA 24, GTA V, Spiderman, dll</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Bebas Ongkir Delivery (&lt; 5 KM)</li>
+                        </ul>
+                    </div>
+                    <a href="#order" onclick="selectPricing('PS5', '24 Jam', 'Diantar Sampai Rumah')" class="w-full py-3 text-center rounded-xl bg-gradient-to-r from-brand-cyan to-brand-purple text-black font-bold hover:opacity-90 transition">Pesan Paket</a>
+                </div>
+
+                <!-- Paket Weekend 3 Hari -->
+                <div class="gradient-border p-6 rounded-2xl relative flex flex-col justify-between glow-box">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold font-orbitron px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent">PAKET WEEKEND</span>
+                            <i class="fa-solid fa-calendar-week text-2xl text-brand-accent"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">PS5 - Weekend (3 Hari)</h3>
+                        <p class="text-gray-400 text-sm mb-4">Sewa Jumat s/d Minggu atau 3 Hari berturut-turut. Lebih Hemat!</p>
+                        <div class="text-3xl font-orbitron font-black text-white mb-6">
+                            Rp 500.000 <span class="text-sm font-normal text-gray-400">/ 3 Hari</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> 2-4 Stik DualSense (by req)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Bebas Request Tambah Game</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Layanan Diantar Sampai Rumah</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Support Teknis 24 Jam</li>
+                        </ul>
+                    </div>
+                    <a href="#order" onclick="selectPricing('PS5', 'Paket Weekend (3 Hari)', 'Diantar Sampai Rumah')" class="w-full py-3 text-center rounded-xl bg-white/10 hover:bg-brand-cyan hover:text-black font-semibold transition text-white">Pilih Paket</a>
+                </div>
+            </div>
+
+            <!-- PS4 PRICING -->
+            <div id="content-ps4" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Per Jam -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold font-orbitron px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan">MAIN DI TEMPAT</span>
+                        <h3 class="text-2xl font-bold text-white mt-4 mb-2">PS4 - Per Jam</h3>
+                        <p class="text-gray-400 text-sm mb-4">Sewa per jam di spot rental Ps Mancii.</p>
+                        <div class="text-3xl font-orbitron font-black text-white mb-6">
+                            Rp 10.000 <span class="text-sm font-normal text-gray-400">/ Jam</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> 2 Stik DS4 Original</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> TV LED Full HD 32-43 Inch</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Tempat Nyaman &amp; AC</li>
+                        </ul>
+                    </div>
+                    <a href="#order" onclick="selectPricing('PS4', '1 Jam', 'Rental di Tempat')" class="w-full py-3 text-center rounded-xl bg-white/10 hover:bg-brand-cyan hover:text-black font-semibold transition text-white">Pilih Paket</a>
+                </div>
+
+                <!-- 24 Jam -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-purple/50 flex flex-col justify-between relative">
+                    <span class="text-xs font-bold font-orbitron px-3 py-1 rounded-full bg-brand-purple/30 text-purple-300">HOME RENTAL / COD</span>
+                    <h3 class="text-2xl font-bold text-white mt-4 mb-2">PS4 - Paket 24 Jam</h3>
+                    <p class="text-gray-400 text-sm mb-4">Sewa seharian penuh untuk dirumah.</p>
+                    <div class="text-3xl font-orbitron font-black text-white mb-6">
+                        Rp 90.000 <span class="text-sm font-normal text-gray-400">/ 24 Jam</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> 2 Stik DS4 Wireless</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Kumpulan Game Hits (eFootball, GTA, dll)</li>
+                        <li class="flex items-cent
